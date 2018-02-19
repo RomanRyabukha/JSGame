@@ -5,10 +5,13 @@ jQuery('document').ready(function () {
     function uptime() {
         document.getElementById('time').innerHTML = time;
         time -= 1;
-        if (time <= 0) {
-            scores=prompt('Game OVer'+'<p>Name</p>')
+        b = new Boolean(false);
+        if (time == 0 & b==false) {
+            scores = prompt('Game OVer' + '<p>Name</p>');
+            b = true;
         }
     }
+   
     $('#ngame').click(function () {
         $('img').remove();
 
@@ -119,4 +122,5 @@ jQuery('document').ready(function () {
             img[i].style.top = top;
         }
     });
+   
 })
